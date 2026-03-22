@@ -1,3 +1,5 @@
+import { validateMinHostVersion } from "../../src/plugins/min-host-version.ts";
+
 export type ExtensionPackageJson = {
   name?: string;
   version?: string;
@@ -6,6 +8,7 @@ export type ExtensionPackageJson = {
   openclaw?: {
     install?: {
       npmSpec?: string;
+      minHostVersion?: string;
     };
   };
 };
@@ -24,6 +27,10 @@ export function collectBundledExtensionManifestErrors(extensions: BundledExtensi
       errors.push(
         `bundled extension '${extension.id}' manifest invalid | openclaw.install.npmSpec must be a non-empty string`,
       );
+    }
+    const minHostVersionError = validateMinHostVersion(install?.minHostVersion);
+    if (minHostVersionError) {
+      errors.push(`bundled extension '${extension.id}' manifest invalid | ${minHostVersionError}`);
     }
   }
 
