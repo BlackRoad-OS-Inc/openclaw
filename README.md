@@ -1,3 +1,11 @@
+# openclaw
+
+> Lucidia — Personal AI assistant by BlackRoad OS. Fork of OpenClaw. Multi-channel (WhatsApp, Telegram, Slack, Discord, 20+). Local Ollama inference. Proprietary.
+
+Part of the [BlackRoad OS](https://blackroad.io) ecosystem — [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
+
+---
+
 # Lucidia — Personal AI Assistant by BlackRoad OS
 
 > Forked from [OpenClaw](https://github.com/openclaw/openclaw). Rebranded and customized for BlackRoad OS infrastructure.
